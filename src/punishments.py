@@ -6,7 +6,7 @@ import json
 import pandas as pd
 import spacy
 import yaml
-from gender import GenderExtractor
+from src.gender import GenderExtractor
 
 # Load the spaCy model for lemmatization
 spacy_model = "ru_core_news_sm"

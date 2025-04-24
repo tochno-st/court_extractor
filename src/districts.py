@@ -20,7 +20,7 @@ class MunicipalityExtractor:
         
         if dict_path is None:
             # Default path relative to the project root
-            dict_path = os.path.join('data', 'interim', 'mun_court_dict_v20250424.csv')
+            dict_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'interim', 'mun_court_dict_v20250424.csv')
             
         if not os.path.exists(dict_path):
             raise FileNotFoundError(f"Dictionary file not found at: {dict_path}")
