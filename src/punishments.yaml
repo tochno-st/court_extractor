@@ -1,0 +1,108 @@
+version: 1.0
+decision_pattern: "(п\\s*о\\s*с\\s*т\\s*а\\s*н\\s*о\\s*в\\s*и\\s*л|п\\s*р\\s*и\\s*г\\s*о\\s*в\\s*о\\s*р\\s*и\\s*л|о\\s*п\\s*р\\s*е\\s*д\\s*е\\s*л\\s*и\\s*л\\s*а|о\\s*п\\s*р\\s*е\\s*д\\s*е\\s*л\\s*и\\s*л|с\\s*у\\s*д\\s*\\n\\s*п\\s*р\\s*и\\s*з\\s*н\\s*а\\s*т\\s*ь|п\\s*р\\s*и\\s*з\\s*н\\s*а\\s*т\\s*ь)\\s*:?"
+sensitive_pattern: "не\\s*подлежит\\s*размещению\\s*в\\s*сети|данные\\s*изъяты\\s*в\\s*интересах\\s*несовершеннолетнего|данная\\s*категория\\s*дела\\s*публикации\\s*не\\s*подлежит"
+punishments:
+  штраф:
+    keywords: ["штраф", "штрафа"]
+    severity: ["рубль"]
+    transformation: ["тысячи в рубли"]
+    type: []
+    category: "main_and_supplement"
+
+  лишение права занимать определенные должности или заниматься определенной деятельностью:
+    keywords: ["лишение право занимать определенный должность", "лишение право заниматься определенный деятельность"]
+    severity: ["год", "месяц"]
+    transformation: []
+    type: []
+    category: "main_and_supplement"
+
+  ограничение свободы:
+    keywords: ["ограничение свобода"]
+    severity: ["год", "месяц"]
+    transformation: []
+    type: []
+    category: "main_and_supplement"
+  
+  обязанность пройти лечение от наркомании и медицинскую и (или) социальную реабилитацию:
+    keywords: ["обязанность пройти лечение от наркомания", "медицинский реабилитация", "cоциальный реабилитация"]
+    severity: ["год", "месяц"]
+    transformation: []
+    type: []
+    category: "supplement"
+
+  лишение специального, воинского или почетного звания, классного чина и государственных наград:
+    keywords: ["лишение специальный", "лишение воинский", "лишение классный чин", "лишение государственный награда"]
+    severity: "не определяется"
+    transformation: []
+    type: []
+    category: "supplement"
+
+  обязательные работы:
+    keywords: ["обязательный работа"]
+    severity: "срок в часах"
+    transformation: []
+    type: []
+    category: "main"
+
+  исправительные работы:
+    keywords: ["исправительный работа"]
+    severity: ["год", "месяц"]
+    transformation: []
+    type: []
+    category: "main"
+
+  ограничение по военной службе:
+    keywords: ["ограничение по военный служба"]
+    severity: ["год", "месяц"]
+    transformation: []
+    type: []
+    category: "main"
+
+  ограничение свободы:
+    keywords: ["ограничение свобода"]
+    severity: ["год", "месяц"]
+    transformation: []
+    type: []
+    category: "main"
+
+  принудительные работы:
+    keywords: ["принудительный работа"]
+    severity: ["год", "месяц"]
+    transformation: []
+    type: []
+    category: "main"
+
+  арест:
+    keywords: ["арест"]
+    severity: ["месяц"]
+    transformation: []
+    type: []
+    category: "main"
+
+  содержание в дисциплинарной воинской части:
+    keywords: ["содержание в дисциплинарный воинский часть"]
+    severity: ["год", "месяц"]
+    transformation: []
+    type: []
+    category: "main"
+
+  лишение свободы на определенный срок:
+    keywords: ["лишение свобода"]
+    type: ["колония строго режима", "колония общего режима"]
+    severity: ["год", "месяц"]
+    transformation: []
+    category: "main"
+
+  пожизненное лишение свободы:
+    keywords: ["пожизненный лишение свобода"]
+    severity: "не определяется"
+    transformation: []
+    type: []
+    category: "main"
+
+  смертная казнь:
+    keywords: ["смертный казнь"]
+    severity: "не определяется"
+    transformation: []
+    type: []
+    category: "main"

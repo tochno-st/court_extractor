@@ -1,0 +1,11 @@
+pandas>=2.1.3
+re>=2.2.1
+spacy>=3.7.2
+nameparser>=1.1.3
+pyyaml>=6.0.1
+google-generativeai>=0.3.2
+ru-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/ru_core_news_sm-3.7.0/ru_core_news_sm-3.7.0-py3-none-any.whl
+natasha>=1.7.0
+russiannames>=0.0.3
+pymorphy2>=0.9.1
+pytrovich>=0.1.0
