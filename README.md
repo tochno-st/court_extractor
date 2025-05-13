@@ -160,7 +160,8 @@ The module supports:
 
 ## Contributors
 
-Adam Torosyan, Vitovt Kopytok (vitovt.kopytok@gmail.com)
+[![Adam Torosyan](https://github.com/adamtorosyan.png)](https://github.com/adamtorosyan)
+, Vitovt Kopytok (vitovt.kopytok@gmail.com)
 
 ## License
 
